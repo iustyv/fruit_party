@@ -1,1 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Readex+Pro">
+        <title>Fruit Party</title>
+        <style>
+            body {
+                font-family: Readex Pro;
+                margin:0px;
+                background-color: rgb(255,209,199);
+            }
+            .light {
+                margin:90px;
+            }
+            body p{
+                line-height: 25px;
+            }
+            h2{
+                margin-top: 50px;
+            }
+            h3{
+                padding-top:40px;
+            }
+            .image_parent {
+                display: flex;
+                justify-content: space-evenly;
+            }
+            .image_parent figure img{
+                width: 100%;
+                height: auto;
+            }
 
+            .image_parent figure{
+                width: 30%;
+                height:auto;
+                margin:auto;
+            }
+            figcaption {
+                padding:5px;
+            }
+            dl{
+                padding:10px;
+                margin:10px;
+                line-height: 25px;
+            }
+            dt{
+                font-weight: bold;
+            }
+            dd {
+                padding:5px;
+                margin-bottom: 15px;
+            }
+            .image_parent img{
+                width:30%;
+                height:auto;
+            }
+            img {
+                width: auto;
+                height:auto;
+            }
+            .dark{
+                background-color: rgb(32, 32, 32);
+                color: rgb(255, 254, 240);
+                padding:60px 90px 90px 90px;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="light">
+        <h1 lang="en">Let's party together!</h1>
+        <h2>Zasady gry</h2>
+        <p>Fruit party to gra polegająca na łapaniu spadających owoców. Przesuwając myszką wzdłuż ekranu sterujesz kapibarą o imieniu Charlie. Charlie lubi owoce, więc chętnie je łapie. Ale, ale! Niektóre owoce mogą nie być świeże! Jak wiadomo, spożywanie zgniłego jedzenia nie kończy się dobrze. Charlie nie jest w tej kwestii wyjątkiem. Musisz uważać, aby łapał on tylko kolorowe owoce, a unikał tych brązowych.</p>
+        
+        <p>Masz tylko 3 szanse. Łapiąc zgnitka tracisz jedno serduszko, podobnie - gdy upuścisz zdrowy owoc. Wraz z postępem rozgrywki będzie coraz więcej owoców do złapania, a także będą one spadać szybciej. Możesz także zdobyć bonusy w postaci kryształków. Gdy złapiesz jeden z nich, dostaniesz dodatkowych 10 punktów, jednak za upuszczenie - nie stracisz serduszka.</p>
+        <p>To już wszystko, co musisz wiedzieć o zasadach gry przed rozpoczęciem. <b>Powodzenia!</b></p>
+        <div class="image_parent">
+            <figure>
+               <img src="img/healthy_screenshot.png" alt="Ekran rozgrywki z przykładowymi zdrowymi owocami"> 
+               <figcaption>Te owoce są pyszne!</figcaption>
+            </figure>
+            <figure>
+                <img src="img/rotten_screenshot.png" alt="Ekran rozgrywki z przykładowym zgniłym owocem">
+                <figcaption>Od tych uciekaj!</figcaption>
+            </figure> 
+            <figure>
+                <img src="img/diament_screenshot.png" alt="Ekran rozgrywki z diamentem">
+                <figcaption>Bonusy są na wyciągnięcie łapki!</figcaption>
+            </figure>  
+        </div>
+        <h2>Funkcje</h2>
+        <dl>
+            <dt>Obsługa za pomocą myszki</dt>
+            <dd>Gracz porusza postacią, a także obsługuje dostępne przyciski na ekranie przy pomocy myszki.</dd>
+            <dt>Animowana postać</dt>
+            <dd>W trakcie gry odtwarzana jest animacja poruszania łapkami. Postać zwraca się również w odpowiednią stronę, w zależności od kierunku ruchu myszki.</dd>
+            <dt>Losowe generowanie owoców i bonusów</dt>
+            <dd>Program wybiera losowo, kiedy pojawi się kolejny zgniły owoc lub bonus.</dd>
+            <dt>Losowy wybór owoców</dt>
+            <dd>Program losuje, jaki gatunek owoca zostanie wygenerowany - zarówno dla zdrowych, jaki i dla zgniłych owoców.</dd>
+            <dt>Stopniowe zwiększanie poziomu trudności</dt>
+            <dd>Wraz z postępem rozgrywki stopniowo zwiększa się częstotliwość i prędkość spadania owoców.</dd>
+            <dt>Możliwość zmiany koloru wersji kolorystycznej</dt>
+            <dd>Gracz może wybrać jedną z dwóch wersji kolorystycznych, klikając przycik "change mode". Zmieniają się kolory tła i napisów na każdym z trzech ekranów - startowym, rozgrywki i końcowym.</dd>
+            <dt>Zapis najlepszego wyniku</dt>
+            <dd>Najlepszy wynik jest przechowywany w pliku "best.txt". Jego zawartość jest aktualizowana po osiągnięciu nowego rekordu i wyświetlana na ekranie końcowym.</dd>
+        </dl>
+        <div>
+            <h3>Wersja pomarańczowa</h3>
+            <div class="image_parent">
+                <img src="img/start_pom.png" alt="Ekran startowy w wersji pomarańczowej">
+                <img src="img/gra_pom.png" alt="Ekran rozgrywki w wersji pomarańczowej">
+                <img src="img/koniec_pom.png" alt="Ekran końcowy w wersji pomarańczowej">  
+            </div>
+            <h3>Wersja fioletowa</h3>
+            <div class="image_parent">
+                <img src="img/start_fiol.png" alt="Ekran startowy w wersji fioletowej">
+                <img src="img/gra_fiol.png" alt="Ekran rozgrywki w wersji fioletowej">
+                <img src="img/koniec_fiol.png" alt="Ekran końcowy w wersji fioletowej">
+            </div>
+        </div>
+        </div>
+        <div class="dark">
+        <h2>Najważniejsze fragmenty kodu</h2>
+        <h3>Generowanie nowych owoców i bonusów</h3>
+        <img src="img/generateFruit.png">
+        <h3>Mechanizm łapania lub upuszczenia owocu</h3>
+        <img src="img/catchDrop.png" width="50%" height="auto">
+        <h3>Mechanizm zwiększania częstotliwości i prędkości spadania owoców</h3>
+        <img src="img/changeFruitTimer.png">
+    </div>
+    </body>
+</html>
