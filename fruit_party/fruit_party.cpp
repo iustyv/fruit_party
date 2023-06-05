@@ -425,6 +425,7 @@ int main()
                     rand_bonus = rand() % 20 + 20;
                     rand_rotten = rand() % 9;
                     al_set_timer_speed(timer_fruit, 2.0);
+                    al_set_timer_count(timer_fruit, 0);
 
                     start_page = true;
                     back_executed = false;
