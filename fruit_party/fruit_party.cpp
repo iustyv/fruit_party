@@ -430,6 +430,7 @@ int main()
                     back_executed = false;
                     game_over = false;
                     end_page = false;
+                    saved = false;
 
                 }
                 else if (end_page && clickButton(back)) {
