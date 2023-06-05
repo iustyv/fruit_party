@@ -24,7 +24,7 @@ To już wszystko, co musisz wiedzieć o zasadach gry przed rozpoczęciem. Powodz
 - Zapis najlepszego wyniku
 
 ## Kompilacja
-Gra była tworzona i testowana na systemie Windows 11. Używa biblioteki Allegro 5 w wersji Allegro 5.2.8. W celu kompilacji najlepiej używać programu Visual Studio w wersji community (https://visualstudio.microsoft.com/pl/downloads/). Następnie należy pobrać archiwum .zip, otworzyć plik .sln i zostosować się do tutorialu instalacji paczki Allegro (https://gamefromscratch.com/allegro-tutorial-series-part-1-getting-started/). Poniższe addons powinny zostać dodane: Truetype Font, Font, Image, Dialog. 
+Gra była tworzona i testowana na systemie Windows 11. Używa biblioteki Allegro 5 w wersji Allegro 5.2.8. W celu kompilacji najlepiej używać programu Visual Studio w wersji community (https://visualstudio.microsoft.com/pl/downloads/). Następnie należy pobrać archiwum .zip z plikami projektu (https://github.com/iustyv/fruit_party.git), otworzyć plik .sln i zastosować się do tutorialu instalacji paczki Allegro (https://gamefromscratch.com/allegro-tutorial-series-part-1-getting-started/). Poniższe addons powinny zostać dodane: Truetype Font, Font, Image, Dialog. 
 
 ## Grafika użyta w projekcie
 ### Kapibara
